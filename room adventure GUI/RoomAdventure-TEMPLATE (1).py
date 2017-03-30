@@ -123,6 +123,8 @@ class Game(Frame):
                 r2 = Room("Room 2", "room2.gif")
                 r3 = Room("Room 3", "room3.gif")
                 r4 = Room("Room 4", "room4.gif")
+		#new room
+		r5 = Room("Room 5")
 
                 # add exits to room 1
                 r1.addExit("east", r2) # to the east of room 1 is room 2
@@ -158,7 +160,11 @@ class Game(Frame):
                 r4.addGrabbable("6-pack")
                 # add items to room 4
                 r4.addItem("brew_rig", "Gourd is brewing some sort of oatmeal stout on the brew rig.  A 6-pack is resting beside it.")
-
+		
+		#add exits to room 5
+		r5.addExit("south", r2)
+		
+		
                 # set room 1 as the current room at the beginning of the
                 # game
                 Game.currentRoom = r1
